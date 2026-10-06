@@ -15,7 +15,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="hero-media pointer-events-none object-contain z-20 scale-[0.84] translate-x-[14%] -translate-y-[8%]"
+        className="hero-media pointer-events-none object-contain z-20 scale-[0.84] translate-x-[14%] -translate-y-[8%] hidden md:block"
       />
       <div className="hero-content relative z-10">
         <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-8 md:px-8 md:pb-16 md:pt-12">
