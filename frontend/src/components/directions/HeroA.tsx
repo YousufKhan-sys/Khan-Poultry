@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { asset } from "@/lib/base-path";
 
 const CATES = [
   {
@@ -87,8 +88,8 @@ export default function HeroA() {
               <div className="hero-media relative aspect-[16/11] overflow-hidden rounded-[2rem] border border-line bg-paper shadow-[0_28px_60px_-32px_rgba(26,37,48,0.25)]">
                 <video
                   className="hero-video h-full w-full object-cover"
-                  src="/videos/shop-aesthetic.mp4"
-                  poster="/images/hero-butcher.webp"
+                  src={asset("/videos/shop-aesthetic.mp4")}
+                  poster={asset("/images/hero-butcher.webp")}
                   autoPlay
                   muted
                   loop
@@ -122,7 +123,7 @@ export default function HeroA() {
 
         <div className="mt-11 grid grid-cols-2 gap-3 md:grid-cols-4">
           {CATES.map((c) => (
-            <a
+            <Link
               key={c.label}
               href={c.href}
               data-reveal-scale
@@ -165,7 +166,7 @@ export default function HeroA() {
                   </svg>
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

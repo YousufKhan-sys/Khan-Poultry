@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Work_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
+import { asset } from "@/lib/base-path";
 
 const display = Bricolage_Grotesque({
   variable: "--font-display",
@@ -53,7 +54,7 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="/images/KHAN'S%20LOGO.png"
+          href={asset("/images/KHAN'S%20LOGO.png")}
           type="image/png"
         />
       </head>

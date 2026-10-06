@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FAVORITE_CUTS, WHATSAPP_LINK } from "@/lib/data";
+import { asset } from "@/lib/base-path";
 
 const [poultry, seasoned, seafood] = FAVORITE_CUTS;
 
@@ -72,8 +73,8 @@ function SplitRow({
           {video ? (
             <video
               className="h-full w-full object-cover"
-              src={video}
-              poster={poster}
+              src={asset(video)}
+              poster={poster && asset(poster)}
               autoPlay
               muted
               loop

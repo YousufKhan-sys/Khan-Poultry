@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CATES = [
   {
@@ -33,7 +34,7 @@ export default function Categories() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
           {CATES.map((c, i) => (
-            <a
+            <Link
               key={c.label}
               href={c.href}
               data-reveal-scale
@@ -81,7 +82,7 @@ export default function Categories() {
                   </svg>
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

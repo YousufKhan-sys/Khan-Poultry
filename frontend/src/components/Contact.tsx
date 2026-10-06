@@ -1,5 +1,7 @@
 "use client";
 
+import { asset } from "@/lib/base-path";
+
 const CHANNELS = [
   {
     label: "Call us",
@@ -224,7 +226,7 @@ export default function Contact() {
             <div className="order-1 lg:order-2 relative">
               <div className="relative aspect-[4/3] lg:aspect-[5/4] rounded-3xl overflow-hidden bg-cream-light shadow-[0_30px_60px_-20px_rgba(42,30,22,0.25)]">
                 <img
-                  src="/images/about-team.jpg"
+                  src={asset("/images/about-team.jpg")}
                   alt="Khan's Poultry store interior"
                   className="w-full h-full object-cover"
                 />

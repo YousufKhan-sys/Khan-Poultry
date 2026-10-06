@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { asset } from "@/lib/base-path";
 
 const CATES = [
   {
@@ -30,8 +31,8 @@ export default function HeroB() {
       <div className="absolute inset-0">
         <video
           className="h-full w-full object-cover"
-          src="/videos/mart-overview.mp4"
-          poster="/images/hero-butcher.webp"
+          src={asset("/videos/mart-overview.mp4")}
+          poster={asset("/images/hero-butcher.webp")}
           autoPlay
           muted
           loop
@@ -95,7 +96,7 @@ export default function HeroB() {
         </p>
         <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
           {CATES.map((c, i) => (
-            <a
+            <Link
               key={c.label}
               href={c.href}
               data-reveal-scale
@@ -121,7 +122,7 @@ export default function HeroB() {
                   View
                 </p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

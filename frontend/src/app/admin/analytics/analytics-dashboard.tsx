@@ -3,6 +3,7 @@
 import { useCallback, useMemo, useState } from "react";
 import type { AnalyticsPayload } from "@/lib/admin/analytics";
 import { buildAnalytics } from "@/lib/admin/analytics";
+import { asset } from "@/lib/base-path";
 import { useDemoDb } from "@/lib/admin/demo-store";
 import { BarChart, EmptyState, LineChart, fmtMoney, pct } from "@/components/admin/charts";
 
@@ -346,7 +347,7 @@ export function AnalyticsDashboard() {
                           <div className="flex items-center gap-2">
                             {p.imageUrl ? (
                               // eslint-disable-next-line @next/next/no-img-element
-                              <img src={p.imageUrl} alt="" className="h-8 w-8 rounded object-cover" />
+                              <img src={asset(p.imageUrl)} alt="" className="h-8 w-8 rounded object-cover" />
                             ) : (
                               <span className="h-8 w-8 rounded bg-cream-light" />
                             )}

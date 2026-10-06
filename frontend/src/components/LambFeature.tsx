@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { WHATSAPP_LINK } from "@/lib/data";
+import { asset } from "@/lib/base-path";
 
 export default function LambFeature() {
   const waHref = `${WHATSAPP_LINK}?text=${encodeURIComponent(
@@ -12,8 +14,8 @@ export default function LambFeature() {
       <div className="lamb-media absolute inset-0">
         <video
           className="h-full w-full object-cover"
-          src="/videos/lamb.mp4"
-          poster="/images/products/lamb-chops.webp"
+          src={asset("/videos/lamb.mp4")}
+          poster={asset("/images/products/lamb-chops.webp")}
           autoPlay
           muted
           loop
@@ -44,12 +46,12 @@ export default function LambFeature() {
             >
               Order lamb
             </a>
-            <a
+            <Link
               href="/menu?category=specialty-meats"
               className="press rounded-full border border-white/40 px-8 py-4 text-base font-semibold text-white transition-colors hover:border-white hover:bg-white hover:text-ink"
             >
               See prices
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { asset } from "@/lib/base-path";
 
 export function ImageUploader({
   value,
@@ -88,7 +89,7 @@ export function ImageUploader({
       {value && (
         <div className="flex items-center gap-3 rounded-xl border border-line bg-paper p-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={value} alt="Product preview" className="h-16 w-16 rounded-lg object-cover" />
+          <img src={asset(value)} alt="Product preview" className="h-16 w-16 rounded-lg object-cover" />
           <div className="min-w-0 flex-1">
             <p className="truncate text-xs text-ink-soft">{value}</p>
             <button

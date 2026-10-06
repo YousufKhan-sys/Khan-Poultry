@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { asset } from "@/lib/base-path";
 
 export default function MartOverview() {
   return (
@@ -40,8 +41,8 @@ export default function MartOverview() {
             <div className="relative overflow-hidden rounded-[2rem] shadow-[0_36px_80px_-40px_rgba(28,17,11,0.55)]">
               <video
                 className="aspect-[16/10] w-full object-cover"
-                src="/videos/mart-overview.mp4"
-                poster="/images/hero-butcher.jpg"
+                src={asset("/videos/mart-overview.mp4")}
+                poster={asset("/images/hero-butcher.jpg")}
                 controls
                 loop
                 playsInline

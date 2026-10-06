@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PHONE_LINK } from "@/lib/data";
+import { asset } from "@/lib/base-path";
 
 const MISSION = [
   "Represent our sector on a national forum and adhere to the regulations and legislation pertinent to the food industry of Trinidad & Tobago.",
@@ -30,8 +32,8 @@ export default function AboutUs() {
         <div className="absolute inset-0" aria-hidden>
           <video
             className="h-full w-full object-cover opacity-60"
-            src="/videos/mart-overview.mp4"
-            poster="/images/hero-butcher.jpg"
+            src={asset("/videos/mart-overview.mp4")}
+            poster={asset("/images/hero-butcher.jpg")}
             autoPlay
             muted
             loop
@@ -61,7 +63,7 @@ export default function AboutUs() {
             across the island, wholesale and retail.
           </p>
           <div data-reveal className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
+            <Link
               href="/menu"
               className="press inline-flex items-center justify-center gap-2 rounded-full bg-leaf px-8 py-4 text-base font-semibold text-white shadow-[0_16px_40px_-14px_rgba(59,108,47,0.6)] transition-colors hover:bg-leaf-light"
             >
@@ -80,7 +82,7 @@ export default function AboutUs() {
                 <path d="M5 12h14" />
                 <path d="m13 6 6 6-6 6" />
               </svg>
-            </a>
+            </Link>
             <a
               href={PHONE_LINK}
               className="press inline-flex items-center justify-center rounded-full border border-white/30 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-white/10"
@@ -179,8 +181,8 @@ export default function AboutUs() {
             <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] shadow-[0_40px_90px_-40px_rgba(0,0,0,0.8)]">
               <video
                 className="aspect-[16/9] w-full object-cover"
-                src="/videos/About%20Us%20Video.mp4"
-                poster="/images/hero-butcher.jpg"
+                src={asset("/videos/About%20Us%20Video.mp4")}
+                poster={asset("/images/hero-butcher.jpg")}
                 controls
                 autoPlay
                 muted

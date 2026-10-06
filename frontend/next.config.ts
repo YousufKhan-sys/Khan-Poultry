@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
   // (the CI workflow does this automatically). Empty when hosting at root.
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
   images: {
-    unoptimized: true,
+    // Custom loader so basePath is applied to <Image> srcs in the static
+    // export (unoptimized mode would skip basePath entirely).
+    loader: "custom",
+    loaderFile: "./images-loader.js",
   },
 };
 
